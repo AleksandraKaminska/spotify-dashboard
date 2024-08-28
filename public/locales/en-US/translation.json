@@ -1,0 +1,113 @@
+{
+  "$schema": "../$schema.json",
+  "general": {
+    "or": "Or",
+    "ascending": "Ascending",
+    "descending": "Descending",
+    "add": "Add",
+    "start": "Start",
+    "stop": "Stop",
+    "end": "End",
+    "open": "Open",
+    "close": "Close",
+    "apply": "Apply",
+    "range": "Range",
+    "search": "Search",
+    "of": "of",
+    "results": "results",
+    "pages": "pages",
+    "next": "Next",
+    "prev": "Prev",
+    "is": "is",
+    "timeline": "Timeline",
+    "success": "Success",
+    "warning": "Warning",
+    "error": "Error",
+    "select": "Select",
+    "selected": "Selected",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "items_one": "{{count}} item",
+    "items_other": "{{count}} items",
+    "countSelected": "{{count}} selected",
+    "countOfTotalSelected": "{{count}} of {{total}} selected",
+    "plusCount": "+ {{count}}",
+    "plusCountMore": "+ {{count}} more",
+    "areYouSure": "Are you sure?",
+    "noRecordsFound": "No records found",
+    "typeToConfirm": "Please type {val} to confirm:",
+    "noResultsTitle": "No results",
+    "noResultsMessage": "Try changing the filters or search query",
+    "noSearchResults": "No search results",
+    "noSearchResultsFor": "No search results for <0>'{{query}}'</0>",
+    "noRecordsTitle": "No records",
+    "noRecordsMessage": "There are no records to show",
+    "unsavedChangesTitle": "Are you sure you want to leave this page?",
+    "unsavedChangesDescription": "You have unsaved changes that will be lost if you leave this page.",
+    "showLess": "Show less",
+    "showMore": "Show more",
+    "tip": "Tip"
+  },
+  "nav": {
+    "home": "Home"
+  },
+  "actions": {
+    "save": "Save",
+    "create": "Create",
+    "delete": "Delete",
+    "remove": "Remove",
+    "revoke": "Revoke",
+    "cancel": "Cancel",
+    "enable": "Enable",
+    "disable": "Disable",
+    "complete": "Complete",
+    "viewDetails": "View details",
+    "back": "Back",
+    "close": "Close",
+    "continue": "Continue",
+    "confirm": "Confirm",
+    "edit": "Edit",
+    "download": "Download",
+    "clearAll": "Clear all",
+    "apply": "Apply",
+    "add": "Add",
+    "update": "Update"
+  },
+  "filters": {
+    "compare": {
+      "lessThan": "Less than",
+      "greaterThan": "Greater than",
+      "exact": "Exact",
+      "range": "Range",
+      "lessThanLabel": "less than {{value}}",
+      "greaterThanLabel": "greater than {{value}}",
+      "andLabel": "and"
+    },
+    "addFilter": "Add filter"
+  },
+  "errorBoundary": {
+    "badRequestTitle": "Bad request",
+    "badRequestMessage": "The request was invalid.",
+    "notFoundTitle": "Not found",
+    "notFoundMessage": "The page you are looking for does not exist.",
+    "internalServerErrorTitle": "Internal server error",
+    "internalServerErrorMessage": "An error occurred on the server.",
+    "defaultTitle": "An error occurred",
+    "defaultMessage": "An error occurred while rendering this page."
+  },
+  "collections": {
+    "domain": "Collections",
+    "search": "Search for collections",
+    "deleteWarning": "You are about to delete the collection {{title}}. This action cannot be undone.",
+    "removeCollectionsWarning_one": "You are about to remove {{count}} collection. This action cannot be undone.",
+    "removeCollectionsWarning_other": "You are about to remove {{count}} collections. This action cannot be undone."
+  },
+  "errors": {
+    "serverError": "Server error - Try again later.",
+    "required": "Required"
+  },
+  "fields": {
+    "name": "Name",
+    "optional": "Optional"
+  }
+}

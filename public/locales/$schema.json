@@ -1,0 +1,453 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "general": {
+      "type": "object",
+      "properties": {
+        "or": {
+          "type": "string"
+        },
+        "ascending": {
+          "type": "string"
+        },
+        "descending": {
+          "type": "string"
+        },
+        "add": {
+          "type": "string"
+        },
+        "start": {
+          "type": "string"
+        },
+        "stop": {
+          "type": "string"
+        },
+        "end": {
+          "type": "string"
+        },
+        "open": {
+          "type": "string"
+        },
+        "close": {
+          "type": "string"
+        },
+        "apply": {
+          "type": "string"
+        },
+        "range": {
+          "type": "string"
+        },
+        "search": {
+          "type": "string"
+        },
+        "of": {
+          "type": "string"
+        },
+        "results": {
+          "type": "string"
+        },
+        "pages": {
+          "type": "string"
+        },
+        "next": {
+          "type": "string"
+        },
+        "prev": {
+          "type": "string"
+        },
+        "is": {
+          "type": "string"
+        },
+        "timeline": {
+          "type": "string"
+        },
+        "success": {
+          "type": "string"
+        },
+        "warning": {
+          "type": "string"
+        },
+        "error": {
+          "type": "string"
+        },
+        "select": {
+          "type": "string"
+        },
+        "selected": {
+          "type": "string"
+        },
+        "enabled": {
+          "type": "string"
+        },
+        "disabled": {
+          "type": "string"
+        },
+        "items_one": {
+          "type": "string"
+        },
+        "items_other": {
+          "type": "string"
+        },
+        "countSelected": {
+          "type": "string"
+        },
+        "countOfTotalSelected": {
+          "type": "string"
+        },
+        "plusCount": {
+          "type": "string"
+        },
+        "plusCountMore": {
+          "type": "string"
+        },
+        "areYouSure": {
+          "type": "string"
+        },
+        "noRecordsFound": {
+          "type": "string"
+        },
+        "typeToConfirm": {
+          "type": "string"
+        },
+        "noResultsTitle": {
+          "type": "string"
+        },
+        "noResultsMessage": {
+          "type": "string"
+        },
+        "noSearchResults": {
+          "type": "string"
+        },
+        "noSearchResultsFor": {
+          "type": "string"
+        },
+        "noRecordsTitle": {
+          "type": "string"
+        },
+        "noRecordsMessage": {
+          "type": "string"
+        },
+        "unsavedChangesTitle": {
+          "type": "string"
+        },
+        "unsavedChangesDescription": {
+          "type": "string"
+        },
+        "showLess": {
+          "type": "string"
+        },
+        "showMore": {
+          "type": "string"
+        },
+        "tip": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "or",
+        "ascending",
+        "descending",
+        "add",
+        "start",
+        "stop",
+        "end",
+        "open",
+        "close",
+        "apply",
+        "range",
+        "search",
+        "of",
+        "results",
+        "pages",
+        "next",
+        "prev",
+        "is",
+        "timeline",
+        "success",
+        "warning",
+        "error",
+        "select",
+        "selected",
+        "enabled",
+        "disabled",
+        "items_one",
+        "items_other",
+        "countSelected",
+        "countOfTotalSelected",
+        "plusCount",
+        "plusCountMore",
+        "areYouSure",
+        "noRecordsFound",
+        "typeToConfirm",
+        "noResultsTitle",
+        "noResultsMessage",
+        "noSearchResults",
+        "noSearchResultsFor",
+        "noRecordsTitle",
+        "noRecordsMessage",
+        "unsavedChangesTitle",
+        "unsavedChangesDescription",
+        "showLess",
+        "showMore",
+        "tip"
+      ]
+    },
+    "nav": {
+      "type": "object",
+      "properties": {
+        "home": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "home"
+      ]
+    },
+    "actions": {
+      "type": "object",
+      "properties": {
+        "save": {
+          "type": "string"
+        },
+        "create": {
+          "type": "string"
+        },
+        "delete": {
+          "type": "string"
+        },
+        "remove": {
+          "type": "string"
+        },
+        "revoke": {
+          "type": "string"
+        },
+        "cancel": {
+          "type": "string"
+        },
+        "enable": {
+          "type": "string"
+        },
+        "disable": {
+          "type": "string"
+        },
+        "complete": {
+          "type": "string"
+        },
+        "viewDetails": {
+          "type": "string"
+        },
+        "back": {
+          "type": "string"
+        },
+        "close": {
+          "type": "string"
+        },
+        "continue": {
+          "type": "string"
+        },
+        "confirm": {
+          "type": "string"
+        },
+        "edit": {
+          "type": "string"
+        },
+        "download": {
+          "type": "string"
+        },
+        "clearAll": {
+          "type": "string"
+        },
+        "apply": {
+          "type": "string"
+        },
+        "add": {
+          "type": "string"
+        },
+        "update": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "save",
+        "create",
+        "delete",
+        "remove",
+        "revoke",
+        "cancel",
+        "enable",
+        "disable",
+        "complete",
+        "viewDetails",
+        "back",
+        "close",
+        "continue",
+        "confirm",
+        "edit",
+        "download",
+        "clearAll",
+        "apply",
+        "add",
+        "update"
+      ]
+    },
+    "filters": {
+      "type": "object",
+      "properties": {
+        "compare": {
+          "type": "object",
+          "properties": {
+            "lessThan": {
+              "type": "string"
+            },
+            "greaterThan": {
+              "type": "string"
+            },
+            "exact": {
+              "type": "string"
+            },
+            "range": {
+              "type": "string"
+            },
+            "lessThanLabel": {
+              "type": "string"
+            },
+            "greaterThanLabel": {
+              "type": "string"
+            },
+            "andLabel": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "lessThan",
+            "greaterThan",
+            "exact",
+            "range",
+            "lessThanLabel",
+            "greaterThanLabel",
+            "andLabel"
+          ]
+        },
+        "addFilter": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "compare",
+        "addFilter"
+      ]
+    },
+    "errorBoundary": {
+      "type": "object",
+      "properties": {
+        "badRequestTitle": {
+          "type": "string"
+        },
+        "badRequestMessage": {
+          "type": "string"
+        },
+        "notFoundTitle": {
+          "type": "string"
+        },
+        "notFoundMessage": {
+          "type": "string"
+        },
+        "internalServerErrorTitle": {
+          "type": "string"
+        },
+        "internalServerErrorMessage": {
+          "type": "string"
+        },
+        "defaultTitle": {
+          "type": "string"
+        },
+        "defaultMessage": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "badRequestTitle",
+        "badRequestMessage",
+        "notFoundTitle",
+        "notFoundMessage",
+        "internalServerErrorTitle",
+        "internalServerErrorMessage",
+        "defaultTitle",
+        "defaultMessage"
+      ]
+    },
+    "collections": {
+      "type": "object",
+      "properties": {
+        "domain": {
+          "type": "string"
+        },
+        "search": {
+          "type": "string"
+        },
+        "deleteWarning": {
+          "type": "string"
+        },
+        "removeCollectionsWarning_one": {
+          "type": "string"
+        },
+        "removeCollectionsWarning_other": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "domain",
+        "search",
+        "deleteWarning",
+        "removeCollectionsWarning_one",
+        "removeCollectionsWarning_other"
+      ]
+    },
+    "errors": {
+      "type": "object",
+      "properties": {
+        "serverError": {
+          "type": "string"
+        },
+        "required": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "serverError",
+        "required"
+      ]
+    },
+    "fields": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "optional": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "optional"
+      ]
+    }
+  },
+  "required": [
+    "$schema",
+    "general",
+    "nav",
+    "actions",
+    "filters",
+    "errorBoundary",
+    "collections",
+    "errors",
+    "fields"
+  ]
+}
