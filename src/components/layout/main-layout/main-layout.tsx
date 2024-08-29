@@ -3,12 +3,15 @@ import { NavItem, NavItemProps } from "../nav-item"
 import { Shell } from "../shell"
 import { Link } from "react-router-dom"
 import { useTranslation } from "react-i18next"
+import { SearchProvider } from "@/providers/search-provider"
 
 export const MainLayout = () => {
   return (
-    <Shell>
-      <MainSidebar />
-    </Shell>
+    <SearchProvider>
+      <Shell>
+        <MainSidebar />
+      </Shell>
+    </SearchProvider>
   )
 }
 

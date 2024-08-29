@@ -1,11 +1,21 @@
-import { ArtistDTO } from "./artist"
+import { SearchContent, Artist } from "spotify-types"
+/**
+ * All the spotify search types.
+ */
 
-export interface DeleteRes {
-  id: string
-  object: string
-  deleted: true
+export enum SearchType {
+  ALBUM = "album",
+  ARTIST = "artist",
+  TRACK = "track",
+  SHOW = "show",
+  EPISODE = "episode",
+  PLAYLIST = "playlist",
+  AUDIOBOOK = "audiobook",
 }
 
+// Search
+export type SearchListRes = SearchContent
+
 // Artists
-export type ArtistRes = ArtistDTO[]
-export type ArtistListRes = ArtistDTO[]
+export type ArtistRes = Artist[]
+export type ArtistListRes = Artist[]

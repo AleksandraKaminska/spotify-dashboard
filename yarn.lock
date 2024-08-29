@@ -8974,6 +8974,7 @@ __metadata:
     resize-observer-polyfill: "npm:^1.5.1"
     rimraf: "npm:^6.0.1"
     sonner: "npm:^1.5.0"
+    spotify-types: "npm:^1.0.7"
     storybook: "npm:^8.2.9"
     tailwind-merge: "npm:^2.5.2"
     tailwindcss: "npm:^3.4.10"
@@ -10206,6 +10207,13 @@ __metadata:
   version: 2.0.2
   resolution: "space-separated-tokens@npm:2.0.2"
   checksum: 10c0/6173e1d903dca41dcab6a2deed8b4caf61bd13b6d7af8374713500570aa929ff9414ae09a0519f4f8772df993300305a395d4871f35bc4ca72b6db57e1f30af8
+  languageName: node
+  linkType: hard
+
+"spotify-types@npm:^1.0.7":
+  version: 1.0.7
+  resolution: "spotify-types@npm:1.0.7"
+  checksum: 10c0/d3a8e6f9d7b56f770ba550d9382556c1694ab88d9b01709af445e68043192a5b01960e2e7cbb986755acf8b0e905551dcd1d478342737c127763b80c3f7c6389
   languageName: node
   linkType: hard
 

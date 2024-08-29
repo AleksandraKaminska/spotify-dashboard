@@ -1,34 +1,33 @@
 import { Input, Text } from "@/components/ui"
-import { useDebouncedSearch } from "@/hooks/use-debounced-search"
+import { useSearch } from "@/providers/search-provider"
 import { Search as SearchIcon } from "lucide-react"
-import { Dispatch, SetStateAction } from "react"
 
 interface Props {
   placeholder: string
-  isSearchActive: boolean
-  setIsSearchActive: Dispatch<SetStateAction<boolean>>
 }
 
-export const Search = ({
-  placeholder,
-  isSearchActive,
-  setIsSearchActive,
-}: Props) => {
-  const handleClick = () => setIsSearchActive(true)
-  const { searchValue, onSearchValueChange, query } = useDebouncedSearch()
+export const Search = ({ placeholder }: Props) => {
+  const {
+    isSearchActive,
+    setIsSearchActive,
+    searchValue,
+    onSearchValueChange,
+  } = useSearch()
 
-  console.log(query)
+  const handleClick = () => setIsSearchActive(true)
 
   if (isSearchActive) {
     return (
-      <Input
-        type="search"
-        placeholder={placeholder}
-        autoFocus
-        className="rounded-full"
-        value={searchValue}
-        onChange={(e) => onSearchValueChange(e.target.value)}
-      />
+      <>
+        <Input
+          type="search"
+          placeholder={placeholder}
+          autoFocus
+          className="rounded-full"
+          value={searchValue}
+          onChange={(e) => onSearchValueChange(e.target.value)}
+        />
+      </>
     )
   }
 

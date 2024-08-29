@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Image } from "lucide-react"
 
 import { clx } from "@/utils/clx"
 import { Hint } from "../hint"
@@ -20,21 +21,25 @@ interface InfoBoxProps {
 }
 
 const InfoBox = React.forwardRef<HTMLDivElement, InfoBoxProps>(
-  ({ className, label, description, image, children, ...props }, ref) => {
+  (
+    { className, label, description, image = null, children, ...props },
+    ref
+  ) => {
     const { t } = useTranslation()
     const hintRef = React.useRef(null)
     const { isTruncated, isShowingMore, toggleIsShowingMore } =
       useTruncatedElement({
         ref: hintRef,
       })
+    const withImage = image !== null
 
     return (
       <div
         ref={ref}
         className={clx(
           "group flex items-start gap-x-2 rounded-lg bg-ui-bg-base shadow-borders-base transition-fg focus-visible:shadow-borders-interactive-with-focus disabled:cursor-not-allowed disabled:bg-ui-bg-disabled",
-          { "relative flex-col": image },
-          { "p-3": !image },
+          { "relative flex-col": withImage },
+          { "p-3": !withImage },
           className
         )}
         {...props}
@@ -44,10 +49,15 @@ const InfoBox = React.forwardRef<HTMLDivElement, InfoBoxProps>(
           <img
             src={image}
             alt=""
-            className="aspect-[295/197] h-auto w-full rounded-t-lg object-cover"
+            className="aspect-[640/640] h-auto w-full rounded-t-lg object-cover"
           />
         )}
-        <div className={clx("flex flex-col items-start", { "p-3": image })}>
+        {withImage && !image && (
+          <div className="flex aspect-[640/640] h-auto w-full items-center justify-center bg-ui-bg-subtle">
+            <Image className="text-ui-fg-subtle" />
+          </div>
+        )}
+        <div className={clx("flex flex-col items-start", { "p-3": withImage })}>
           <Text
             size="small"
             weight="plus"
