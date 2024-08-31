@@ -1,21 +1,22 @@
 import { UseQueryOptions, useQuery } from "@tanstack/react-query"
 import { client } from "@/lib/client"
 import { queryKeysFactory } from "@/lib/query-key-factory"
-import { ArtistRes } from "@/types"
+import { AlbumRes } from "@/types"
 
-const ARTIST_QUERY_KEY = "artists"
-export const artistsQueryKeys = queryKeysFactory(ARTIST_QUERY_KEY)
+const ALBUM_QUERY_KEY = "albums"
+export const artistsQueryKeys = queryKeysFactory(ALBUM_QUERY_KEY)
 
-export const useArtist = (
+export const useAlbum = (
   id: string,
   options?: Omit<
-    UseQueryOptions<ArtistRes, Error, ArtistRes>,
+    UseQueryOptions<AlbumRes, Error, AlbumRes>,
     "queryFn" | "queryKey"
   >
 ) => {
   return useQuery({
     queryKey: artistsQueryKeys.detail(id),
-    queryFn: async () => client.artists.retrieve(id),
+    queryFn: async () => client.albums.retrieve(id),
     ...options,
   })
 }
+

@@ -19,7 +19,7 @@ export const ArtistDetail = () => {
   }
 
   return (
-    <Container className="min-h-full p-4">
+    <Container className="p-4">
       <header className="flex items-end gap-16 border-b pb-8">
         <img
           src={data.images[0].url}
