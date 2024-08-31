@@ -1,4 +1,4 @@
-import { SearchContent, Artist } from "spotify-types"
+import { SearchContent, Artist, SavedTrack } from "spotify-types"
 /**
  * All the spotify search types.
  */
@@ -7,8 +7,6 @@ export enum SearchType {
   ALBUM = "album",
   ARTIST = "artist",
   TRACK = "track",
-  SHOW = "show",
-  EPISODE = "episode",
   PLAYLIST = "playlist",
   AUDIOBOOK = "audiobook",
 }
@@ -17,5 +15,10 @@ export enum SearchType {
 export type SearchListRes = SearchContent
 
 // Artists
-export type ArtistRes = Artist[]
+export type ArtistRes = Artist
 export type ArtistListRes = Artist[]
+
+// Tracks
+export interface TrackListRes {
+  items: SavedTrack[]
+}

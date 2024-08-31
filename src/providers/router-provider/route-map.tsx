@@ -17,6 +17,18 @@ export const RouteMap: RouteObject[] = [
           crumb: () => "Home",
         },
       },
+      {
+        path: "/artists",
+        handle: {
+          crumb: () => "Artists",
+        },
+        children: [
+          {
+            path: ":id",
+            lazy: () => import("@/routes/artists/artist-detail"),
+          },
+        ],
+      },
     ],
   },
 ]

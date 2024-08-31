@@ -381,33 +381,6 @@
         "defaultMessage"
       ]
     },
-    "collections": {
-      "type": "object",
-      "properties": {
-        "domain": {
-          "type": "string"
-        },
-        "search": {
-          "type": "string"
-        },
-        "deleteWarning": {
-          "type": "string"
-        },
-        "removeCollectionsWarning_one": {
-          "type": "string"
-        },
-        "removeCollectionsWarning_other": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "domain",
-        "search",
-        "deleteWarning",
-        "removeCollectionsWarning_one",
-        "removeCollectionsWarning_other"
-      ]
-    },
     "errors": {
       "type": "object",
       "properties": {
@@ -446,7 +419,6 @@
     "actions",
     "filters",
     "errorBoundary",
-    "collections",
     "errors",
     "fields"
   ]

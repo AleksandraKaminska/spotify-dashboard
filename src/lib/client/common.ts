@@ -1,36 +1,7 @@
 import { stringify } from "qs"
-
-const SPOTIFY_TOKEN_URL = "https://accounts.spotify.com/api/token"
-const SPOTIFY_CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID
-const SPOTIFY_CLIENT_SECRET = import.meta.env.VITE_SPOTIFY_CLIENT_SECRET
+import { getAccessToken } from "./access-token"
 
 let accessToken: string | null = null
-
-async function getAccessToken() {
-  const authHeader = btoa(`${SPOTIFY_CLIENT_ID}:${SPOTIFY_CLIENT_SECRET}`)
-
-  const body = new URLSearchParams()
-  body.append("grant_type", "client_credentials")
-
-  const response = await fetch(SPOTIFY_TOKEN_URL, {
-    method: "POST",
-    headers: {
-      Authorization: `Basic ${authHeader}`,
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
-    body: body?.toString(),
-  })
-
-  if (!response.ok) {
-    const errorData = await response.json()
-    throw new Error(
-      `Spotify API error ${response.status}: ${errorData.error_description}`
-    )
-  }
-
-  const data = await response.json()
-  return data.access_token
-}
 
 const commonHeaders = async (): Promise<HeadersInit> => {
   if (!accessToken) {
@@ -97,6 +68,12 @@ async function makeRequest<
     throw new Error(`API error ${response.status}: ${errorData.message}`)
   }
 
+  const contentType = response.headers.get("content-type")
+
+  if (!contentType?.includes("application/json")) {
+    return response as TRes
+  }
+
   return response.json()
 }
 
@@ -130,18 +107,43 @@ export async function postRequest<
   return makeRequest<TRes, Record<string, any>>(path, payload, undefined, {
     ...options,
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
   })
 }
 
-export async function deleteRequest<TRes>(
+export async function putRequest<
+  TRes,
+  TQuery extends Record<string, any> | undefined = object,
+>(
   path: string,
+  query?: TQuery,
   options?: Omit<RequestInit, "body" | "method">
 ): Promise<TRes> {
-  return makeRequest<TRes, undefined>(path, undefined, undefined, {
-    ...options,
-    method: "DELETE",
-  })
+  return makeRequest<TRes, undefined, Record<string, any>>(
+    path,
+    undefined,
+    query,
+    {
+      ...options,
+      method: "PUT",
+    }
+  )
+}
+
+export async function deleteRequest<
+  TRes,
+  TQuery extends Record<string, any> | undefined = object,
+>(
+  path: string,
+  query?: TQuery,
+  options?: Omit<RequestInit, "body" | "method">
+): Promise<TRes> {
+  return makeRequest<TRes, undefined, Record<string, any>>(
+    path,
+    undefined,
+    query,
+    {
+      ...options,
+      method: "DELETE",
+    }
+  )
 }

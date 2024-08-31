@@ -4,14 +4,17 @@ import { Shell } from "../shell"
 import { Link } from "react-router-dom"
 import { useTranslation } from "react-i18next"
 import { SearchProvider } from "@/providers/search-provider"
+import { AuthProvider } from "@/providers/auth-provider"
 
 export const MainLayout = () => {
   return (
-    <SearchProvider>
-      <Shell>
-        <MainSidebar />
-      </Shell>
-    </SearchProvider>
+    <AuthProvider>
+      <SearchProvider>
+        <Shell>
+          <MainSidebar />
+        </Shell>
+      </SearchProvider>
+    </AuthProvider>
   )
 }
 

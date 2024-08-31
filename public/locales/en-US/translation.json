@@ -95,16 +95,14 @@
     "defaultTitle": "An error occurred",
     "defaultMessage": "An error occurred while rendering this page."
   },
-  "collections": {
-    "domain": "Collections",
-    "search": "Search for collections",
-    "deleteWarning": "You are about to delete the collection {{title}}. This action cannot be undone.",
-    "removeCollectionsWarning_one": "You are about to remove {{count}} collection. This action cannot be undone.",
-    "removeCollectionsWarning_other": "You are about to remove {{count}} collections. This action cannot be undone."
-  },
   "errors": {
     "serverError": "Server error - Try again later.",
     "required": "Required"
+  },
+  "artist": {
+    "followers": "{{number}} followers",
+    "follow": "Follow",
+    "unfollow": "Unfollow"
   },
   "fields": {
     "name": "Name",
