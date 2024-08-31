@@ -30,7 +30,8 @@ export const AuthProvider = ({ children }: PropsWithChildren) => {
       client_id: SPOTIFY_CLIENT_ID,
       response_type: CODE_KEY,
       redirect_uri: REDIRECT_URI,
-      scope: "user-library-read user-library-modify",
+      scope:
+        "user-library-read user-library-modify user-follow-read user-follow-modify playlist-modify-public playlist-modify-private",
     })
 
     return `${SPOTIFY_AUTHORIZE_URL}?${params.toString()}`

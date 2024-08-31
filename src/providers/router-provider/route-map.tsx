@@ -41,6 +41,18 @@ export const RouteMap: RouteObject[] = [
           },
         ],
       },
+      {
+        path: "/playlists",
+        handle: {
+          crumb: () => "Playlist",
+        },
+        children: [
+          {
+            path: ":id",
+            lazy: () => import("@/routes/playlists/playlist-detail"),
+          },
+        ],
+      },
     ],
   },
 ]

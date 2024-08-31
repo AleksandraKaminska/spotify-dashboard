@@ -75,39 +75,42 @@ export const Tracks = ({
 
   return (
     <ul className={clx("grid list-inside gap-6", className)}>
-      {tracks.items.map((item, i) => (
-        <li key={item.id} className="flex items-center justify-between gap-4">
-          <div className="flex items-center gap-4">
-            <Text className="text-ui-fg-muted" size="large">
-              {i + 1}
-            </Text>
-            <div>
-              <Heading level="h3">{item.name}</Heading>
-              <Text className="text-ui-fg-subtle">
-                {(item as SimplifiedTrack).artists
-                  ?.map(({ name }) => name)
-                  ?.join(" · ")}
+      {tracks.items.map((_item, i) => {
+        const item = { ..._item, ...((_item as any).track ?? {}) }
+        return (
+          <li key={item.id} className="flex items-center justify-between gap-4">
+            <div className="flex items-center gap-4">
+              <Text className="text-ui-fg-muted" size="large">
+                {i + 1}
               </Text>
+              <div>
+                <Heading level="h3">{item.name}</Heading>
+                <Text className="text-ui-fg-subtle">
+                  {(item as SimplifiedTrack).artists
+                    ?.map(({ name }) => name)
+                    ?.join(" · ")}
+                </Text>
+              </div>
             </div>
-          </div>
-          <IconButton
-            className="text-ui-fg-interactive"
-            variant="transparent"
-            disabled={isPending}
-            onClick={() =>
-              data?.items.some(({ track }) => track.id === item.id)
-                ? deleteTrack({ ids: item.id })
-                : saveTrack({ ids: item.id })
-            }
-          >
-            {data?.items.some(({ track }) => track.id === item.id) ? (
-              <CircleCheck />
-            ) : (
-              <CirclePlus />
-            )}
-          </IconButton>
-        </li>
-      ))}
+            <IconButton
+              className="text-ui-fg-interactive"
+              variant="transparent"
+              disabled={isPending}
+              onClick={() =>
+                data?.items.some(({ track }) => track.id === item.id)
+                  ? deleteTrack({ ids: item.id })
+                  : saveTrack({ ids: item.id })
+              }
+            >
+              {data?.items.some(({ track }) => track.id === item.id) ? (
+                <CircleCheck />
+              ) : (
+                <CirclePlus />
+              )}
+            </IconButton>
+          </li>
+        )
+      })}
       <Toaster />
     </ul>
   )

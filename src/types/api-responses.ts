@@ -3,7 +3,7 @@ import {
   Artist,
   SavedTrack,
   Album,
-  SavedAlbum,
+  Playlist,
 } from "spotify-types"
 /**
  * All the spotify search types.
@@ -14,7 +14,6 @@ export enum SearchType {
   ARTIST = "artist",
   TRACK = "track",
   PLAYLIST = "playlist",
-  AUDIOBOOK = "audiobook",
 }
 
 // Search
@@ -25,6 +24,9 @@ export type ArtistRes = Artist
 
 // Albums
 export type AlbumRes = Album
+
+// Playlists
+export type PlaylistRes = Playlist
 
 // Tracks
 export interface TrackListRes {
