@@ -1,12 +1,10 @@
 import { Tabs } from "@/components/ui"
 import { useSearch } from "@/providers/search-provider"
 import { useEffect, useState } from "react"
-import { useTranslation } from "react-i18next"
 import { SearchContent } from "spotify-types"
 import { SearchResult } from "./search-result"
 
 export const SearchResultList = () => {
-  const { t } = useTranslation()
   const { isSearchActive, data } = useSearch()
   const [tab, setTab] = useState<string>()
 

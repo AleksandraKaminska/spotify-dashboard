@@ -1,6 +1,7 @@
 import { NoResults } from "@/components/common/empty-content"
 import { Tracks } from "@/components/common/tracks"
 import { InfoBox, Toaster } from "@/components/ui"
+import { useState } from "react"
 import { Link } from "react-router-dom"
 import {
   Artist,
@@ -9,12 +10,17 @@ import {
   SimplifiedAlbum,
   SimplifiedTrack,
 } from "spotify-types"
+import { Pagination } from "./pagination"
 
 interface Props {
   results: SearchContent[keyof SearchContent]
 }
 
-export const SearchResult = ({ results }: Props) => {
+export const SearchResult = ({ results: _results }: Props) => {
+  const [results, setResults] = useState(_results)
+
+  console.log(results)
+
   const hasNoResults =
     results?.items.length === 0 ||
     results?.items.filter((item) => item).length === 0
@@ -53,6 +59,7 @@ export const SearchResult = ({ results }: Props) => {
               className="p-8"
             />
           )}
+          <Pagination results={results} setResults={setResults} />
           <Toaster />
         </>
       )}

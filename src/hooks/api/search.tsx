@@ -13,7 +13,7 @@ export const useSearch = (
     "queryFn" | "queryKey"
   >
 ) => {
-  return useQuery({
+  return useQuery<SearchListRes>({
     queryKey: searchQueryKeys.list(query),
     queryFn: () => client.search.list(query),
     ...options,

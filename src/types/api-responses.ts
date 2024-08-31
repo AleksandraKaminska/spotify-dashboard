@@ -4,6 +4,7 @@ import {
   SavedTrack,
   Album,
   Playlist,
+  Paging,
 } from "spotify-types"
 /**
  * All the spotify search types.
@@ -17,7 +18,7 @@ export enum SearchType {
 }
 
 // Search
-export type SearchListRes = SearchContent
+export type SearchListRes = Paging<SearchContent>
 
 // Artists
 export type ArtistRes = Artist
