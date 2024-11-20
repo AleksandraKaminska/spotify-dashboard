@@ -33,11 +33,11 @@ const Header = () => {
   return (
     <Link to="/" className="block px-4 pb-3 pt-2">
       <img
-        className="mx-auto -mb-1 mt-1 aspect-[31/10] h-8 w-auto"
-        src="/logo.webp"
-        alt="Pergam.in logo"
-        width={2560}
-        height={819}
+        className="mx-auto -mb-1 mt-1 aspect-[117/32] h-8 w-auto"
+        src="/logo.png"
+        alt="Spotify logo"
+        width={117}
+        height={32}
       />
     </Link>
   )

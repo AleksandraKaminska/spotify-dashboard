@@ -12,7 +12,7 @@ export const Home = () => {
     <Container className="flex h-full flex-col items-center justify-center gap-8 px-6 py-4">
       {!isSearchActive && (
         <>
-          <img src="/logo.webp" width={260} height={101} alt="Pergam.in logo" />
+          <img src="/logo.png" width={260} height={71} alt="Spotify logo" />
         </>
       )}
       <Search placeholder={t("general.search")} />
